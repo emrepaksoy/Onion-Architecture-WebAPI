@@ -1,0 +1,12 @@
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\bin\Debug\net6.0\E-TicaretAPI.Domain.deps.json
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\bin\Debug\net6.0\E-TicaretAPI.Domain.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\bin\Debug\net6.0\E-TicaretAPI.Domain.pdb
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\E-TicaretAPI.Domain.csproj.AssemblyReference.cache
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\E-TicaretAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\E-TicaretAPI.Domain.AssemblyInfoInputs.cache
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\E-TicaretAPI.Domain.AssemblyInfo.cs
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\E-TicaretAPI.Domain.csproj.CoreCompileInputs.cache
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\E-TicaretAPI.Domain.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\refint\E-TicaretAPI.Domain.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\E-TicaretAPI.Domain.pdb
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Domain\obj\Debug\net6.0\ref\E-TicaretAPI.Domain.dll
