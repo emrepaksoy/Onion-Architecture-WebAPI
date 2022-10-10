@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using E_TicaretAPI.Application.Repositories;
 using E_TicaretAPI.Persistence.Repositories;
+using E_TicaretAPI.Domain.Entities.Identity;
+using E_TicaretAPI.Application.Abstraction.Services;
+using E_TicaretAPI.Persistence.Services;
 
 namespace E_TicaretAPI.Persistence
 {
@@ -17,6 +20,17 @@ namespace E_TicaretAPI.Persistence
         {
 
             services.AddDbContext<ETicaretAPIDbContext>(options => options.UseNpgsql(Configuration.GetConnString));
+
+            services.AddIdentity<AppUser,AppRole>(options =>
+            {
+                options.Password.RequiredLength = 4;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+               
+
+            }).AddEntityFrameworkStores<ETicaretAPIDbContext>();
 
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
@@ -31,6 +45,8 @@ namespace E_TicaretAPI.Persistence
             services.AddScoped<IInvoiceFileReadRepository, InvoiceFileReadRepository>();
             services.AddScoped<IInvoiceFileWriteRepository, InvoiceFileWriteRepository>();
 
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
 
 
         }

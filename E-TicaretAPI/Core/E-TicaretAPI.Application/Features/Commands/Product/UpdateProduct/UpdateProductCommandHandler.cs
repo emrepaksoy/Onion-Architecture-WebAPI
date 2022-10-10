@@ -1,5 +1,6 @@
 ﻿using E_TicaretAPI.Application.Repositories;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,13 @@ namespace E_TicaretAPI.Application.Features.Commands.Product.UpdateProduct
     {
         readonly IProductWriteRepository _productWriteRepository;
         readonly IProductReadRepository _productReadRepository;
+        readonly ILogger<UpdateProductCommandHandler> _logger;
 
-        public UpdateProductCommandHandler(IProductWriteRepository productWriteRepository, IProductReadRepository productReadRepository)
+        public UpdateProductCommandHandler(IProductWriteRepository productWriteRepository, IProductReadRepository productReadRepository, ILogger<UpdateProductCommandHandler> logger)
         {
             _productWriteRepository = productWriteRepository;
             _productReadRepository = productReadRepository;
+            _logger = logger;
         }
 
 
@@ -31,7 +34,7 @@ namespace E_TicaretAPI.Application.Features.Commands.Product.UpdateProduct
             product.Price = request.Price;
 
             await _productWriteRepository.SaveAsync();
-
+            _logger.LogInformation("Ürün güncellendi");
             return new();
         }
     }

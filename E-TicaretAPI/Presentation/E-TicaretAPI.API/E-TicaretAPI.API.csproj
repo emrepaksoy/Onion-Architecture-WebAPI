@@ -23,6 +23,7 @@
     <ProjectReference Include="..\..\Core\E-TicaretAPI.Application\E-TicaretAPI.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\E-TicaretAPI.Infrastructure\E-TicaretAPI.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\E-TicaretAPI.Persistence\E-TicaretAPI.Persistence.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\E-TicaretAPI.SignalR\E-TicaretAPI.SignalR.csproj" />
   </ItemGroup>
 
   <ItemGroup>

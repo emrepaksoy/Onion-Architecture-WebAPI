@@ -7422,3 +7422,1172 @@ Content-Type: application/json; charset=utf-8
 2022-10-05 16:56:44.053 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11989 application/javascript;+charset=utf-8 14.3633ms
 2022-10-05 16:56:44.164 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
 2022-10-05 16:56:44.261 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.9580ms
+2022-10-06 14:18:05.067 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 14:18:05.530 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 14:18:05.531 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 14:18:05.533 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 14:18:05.534 +03:00 [INF] Hosting environment: Development
+2022-10-06 14:18:05.535 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 14:18:06.608 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 14:18:06.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 268.9292ms
+2022-10-06 14:18:06.929 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 14:18:06.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.8150ms
+2022-10-06 14:18:07.203 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 14:18:07.283 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 79.9887ms
+2022-10-06 14:18:54.164 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users application/json 147
+2022-10-06 14:18:54.174 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 147
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 14:18:54.194 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:18:54.230 +03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 14:18:54.270 +03:00 [INF] RequestBody: {
+  "nameSurname": "Emre Paksoy",
+  "userName": "emre.paksoy",
+  "email": "emre@gmail.com",
+  "password": "asd123",
+  "passwordConfirm": "asd123"
+}
+2022-10-06 14:18:54.355 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API) in 117.5206ms
+2022-10-06 14:18:54.360 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:18:54.365 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandHandler.Handle(CreateUserCommandRequest request, CancellationToken cancellationToken) in D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Application\Features\Commands\AppUser\CreateUser\CreateUserCommandHandler.cs:line 13
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at E_TicaretAPI.API.Controllers.UsersController.Create(CreateUserCommandRequest createUserCommandRequest) in D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\Controllers\UsersController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-06 14:18:55.013 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users application/json 147 - 500 - text/plain;+charset=utf-8 848.3994ms
+2022-10-06 14:20:21.115 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users application/json 146
+2022-10-06 14:20:21.121 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 146
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 14:20:21.123 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:20:21.125 +03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 14:20:21.134 +03:00 [INF] RequestBody: {
+  "nameSurname": "Emre Paksoy",
+  "userName": "emrepaksoy",
+  "email": "emre@gmail.com",
+  "password": "asd123",
+  "passwordConfirm": "asd123"
+}
+2022-10-06 14:20:21.136 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API) in 2.3081ms
+2022-10-06 14:20:21.137 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:20:21.139 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandHandler.Handle(CreateUserCommandRequest request, CancellationToken cancellationToken) in D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Application\Features\Commands\AppUser\CreateUser\CreateUserCommandHandler.cs:line 13
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at E_TicaretAPI.API.Controllers.UsersController.Create(CreateUserCommandRequest createUserCommandRequest) in D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\Controllers\UsersController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-06 14:20:21.172 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users application/json 146 - 500 - text/plain;+charset=utf-8 57.3873ms
+2022-10-06 14:20:29.848 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users application/json 140
+2022-10-06 14:20:29.850 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 140
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 14:20:29.857 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:20:29.863 +03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 14:20:29.865 +03:00 [INF] RequestBody: {
+  "nameSurname": "Emre Paksoy",
+  "userName": "emrepaksoy",
+  "email": "emre@gmail.com",
+  "password": "asd",
+  "passwordConfirm": "asd"
+}
+2022-10-06 14:20:29.867 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API) in 2.3411ms
+2022-10-06 14:20:29.868 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:20:29.869 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandHandler.Handle(CreateUserCommandRequest request, CancellationToken cancellationToken) in D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Application\Features\Commands\AppUser\CreateUser\CreateUserCommandHandler.cs:line 13
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at E_TicaretAPI.API.Controllers.UsersController.Create(CreateUserCommandRequest createUserCommandRequest) in D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\Controllers\UsersController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-06 14:20:29.921 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users application/json 140 - 500 - text/plain;+charset=utf-8 73.0736ms
+2022-10-06 14:24:57.684 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 14:24:57.796 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 14:24:57.799 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 14:24:57.802 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 14:24:57.803 +03:00 [INF] Hosting environment: Development
+2022-10-06 14:24:57.804 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 14:24:58.591 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 14:24:58.753 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 165.8573ms
+2022-10-06 14:24:58.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 14:24:58.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.8094ms
+2022-10-06 14:24:58.887 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 14:24:58.986 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 99.0359ms
+2022-10-06 14:25:31.786 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users application/json 147
+2022-10-06 14:25:31.793 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 147
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 14:25:31.805 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:25:31.827 +03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 14:25:31.841 +03:00 [INF] RequestBody: {
+  "nameSurname": "Emre paksoy",
+  "userName": "emre.paksoy",
+  "email": "emre@gmail.com",
+  "password": "asd123",
+  "passwordConfirm": "asd123"
+}
+2022-10-06 14:25:32.966 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 14:25:33.226 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 14:25:33.395 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime), @p7='?', @p8='?', @p9='?', @p10='?', @p11='?', @p12='?' (DbType = Boolean), @p13='?', @p14='?' (DbType = Boolean), @p15='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NameSurname", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2022-10-06 14:25:33.426 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandResponse'.
+2022-10-06 14:25:33.433 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 14:25:33.439 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API) in 1601.735ms
+2022-10-06 14:25:33.441 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:25:33.443 +03:00 [INF] ResponseBody: {"succeeded":true,"message":"Kullanıcı Oluşturuldu."}
+2022-10-06 14:25:33.450 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users application/json 147 - 200 - application/json;+charset=utf-8 1663.7410ms
+2022-10-06 14:26:51.525 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users application/json 147
+2022-10-06 14:26:51.528 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 147
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 14:26:51.531 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:26:51.533 +03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 14:26:51.537 +03:00 [INF] RequestBody: {
+  "nameSurname": "Emre paksoy",
+  "userName": "emre.paksoy",
+  "email": "emre@gmail.com",
+  "password": "asd123",
+  "passwordConfirm": "asd123"
+}
+2022-10-06 14:26:51.581 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 14:26:51.590 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 14:26:51.605 +03:00 [WRN] User validation failed: DuplicateUserName.
+2022-10-06 14:26:51.607 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandResponse'.
+2022-10-06 14:26:51.608 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 14:26:51.609 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API) in 73.3492ms
+2022-10-06 14:26:51.611 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:26:51.612 +03:00 [INF] ResponseBody: {"succeeded":false,"message":"DuplicateUserName - Username 'emre.paksoy' is already taken.<br>"}
+2022-10-06 14:26:51.613 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users application/json 147 - 200 - application/json;+charset=utf-8 88.5069ms
+2022-10-06 14:27:00.807 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 14:27:00.914 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 14:27:00.915 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 14:27:00.918 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 14:27:00.919 +03:00 [INF] Hosting environment: Development
+2022-10-06 14:27:00.920 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 14:27:01.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 14:27:01.231 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 14:27:01.231 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 135.4430ms
+2022-10-06 14:27:01.238 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 7.1965ms
+2022-10-06 14:27:01.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 14:27:01.400 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 83.6261ms
+2022-10-06 14:27:25.963 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users application/json 147
+2022-10-06 14:27:25.970 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 147
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 14:27:25.981 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:27:26.005 +03:00 [INF] Route matched with {action = "Create", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 14:27:26.016 +03:00 [INF] RequestBody: {
+  "nameSurname": "Emre Paksoy",
+  "userName": "emre.paksoy",
+  "email": "emre@gmail.com",
+  "password": "string",
+  "passwordConfirm": "string"
+}
+2022-10-06 14:27:26.886 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 14:27:27.129 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 14:27:27.202 +03:00 [WRN] User validation failed: DuplicateUserName.
+2022-10-06 14:27:27.211 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Commands.AppUser.CreateUser.CreateUserCommandResponse'.
+2022-10-06 14:27:27.217 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 14:27:27.223 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API) in 1210.1666ms
+2022-10-06 14:27:27.225 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Create (E-TicaretAPI.API)'
+2022-10-06 14:27:27.226 +03:00 [INF] ResponseBody: {"succeeded":false,"message":"DuplicateUserName - Username 'emre.paksoy' is already taken.\n"}
+2022-10-06 14:27:27.231 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users application/json 147 - 200 - application/json;+charset=utf-8 1268.7186ms
+2022-10-06 15:28:38.829 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 15:28:39.279 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 15:28:39.281 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 15:28:39.284 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 15:28:39.285 +03:00 [INF] Hosting environment: Development
+2022-10-06 15:28:39.286 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 15:28:39.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 15:28:39.598 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 198.9129ms
+2022-10-06 15:28:39.654 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 15:28:39.657 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.5039ms
+2022-10-06 15:28:39.934 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 15:28:40.021 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 87.9124ms
+2022-10-06 15:28:40.391 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 15:28:40.402 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 10.7534ms
+2022-10-06 15:28:40.448 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 15:28:40.449 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 1.6671ms
+2022-10-06 15:28:40.537 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 15:28:40.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.2039ms
+2022-10-06 15:31:13.254 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 15:31:13.664 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 15:31:13.674 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 15:31:13.694 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 15:31:13.701 +03:00 [INF] Hosting environment: Development
+2022-10-06 15:31:13.714 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 15:31:14.301 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 15:31:14.507 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 208.5418ms
+2022-10-06 15:31:14.557 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 15:31:14.561 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.8133ms
+2022-10-06 15:31:14.653 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 15:31:14.768 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 114.7637ms
+2022-10-06 15:31:57.940 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 15:31:58.288 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 15:31:58.289 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 15:31:58.292 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 15:31:58.293 +03:00 [INF] Hosting environment: Development
+2022-10-06 15:31:58.294 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 15:31:58.802 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 15:31:59.010 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 210.3720ms
+2022-10-06 15:31:59.058 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 15:31:59.063 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.4660ms
+2022-10-06 15:31:59.147 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 15:31:59.293 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 145.8651ms
+2022-10-06 15:32:15.030 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users/Login application/json 62
+2022-10-06 15:32:15.043 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users/Login
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 62
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 15:32:15.061 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 15:32:15.095 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 15:32:15.157 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "emre.paksoy",
+  "password": "asd123"
+}
+2022-10-06 15:32:37.116 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 15:32:37.521 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 15:33:31.568 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-10-06 15:33:31.577 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API) in 76470.9837ms
+2022-10-06 15:33:31.580 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 15:33:31.582 +03:00 [INF] Response:
+StatusCode: 200
+2022-10-06 15:33:31.592 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users/Login application/json 62 - 200 0 - 76562.0435ms
+2022-10-06 16:19:59.121 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 16:19:59.229 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 16:19:59.231 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 16:19:59.233 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 16:19:59.234 +03:00 [INF] Hosting environment: Development
+2022-10-06 16:19:59.235 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 16:20:00.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 16:20:00.163 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 157.7600ms
+2022-10-06 16:20:00.214 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 16:20:00.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.5113ms
+2022-10-06 16:20:00.299 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 16:20:00.435 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 135.4024ms
+2022-10-06 16:20:05.930 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users/Login application/json 57
+2022-10-06 16:20:05.938 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users/Login
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 57
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 16:20:05.952 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:20:05.976 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 16:20:05.988 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "string",
+  "password": "string"
+}
+2022-10-06 16:20:06.844 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 16:20:07.074 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 16:20:07.095 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2022-10-06 16:20:07.113 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API) in 1128.4222ms
+2022-10-06 16:20:07.116 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:20:07.121 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+E_TicaretAPI.Application.Exceptions.NotFoundUserException: Kullanıcı adı veya şifre hatalı...!
+   at E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandHandler.Handle(LoginUserCommandRequest request, CancellationToken cancellationToken) in D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Core\E-TicaretAPI.Application\Features\Commands\AppUser\LoginUser\LoginUserCommandHandler.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at E_TicaretAPI.API.Controllers.UsersController.Login(LoginUserCommandRequest loginUserCommandRequest) in D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\Controllers\UsersController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-06 16:20:07.292 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users/Login application/json 57 - 500 - text/plain;+charset=utf-8 1362.0911ms
+2022-10-06 16:26:42.091 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 16:26:42.197 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 16:26:42.199 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 16:26:42.202 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 16:26:42.202 +03:00 [INF] Hosting environment: Development
+2022-10-06 16:26:42.203 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 16:26:42.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 16:26:42.442 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 135.8328ms
+2022-10-06 16:26:42.443 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 16:26:42.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.6354ms
+2022-10-06 16:26:42.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 16:26:42.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 66.8451ms
+2022-10-06 16:27:30.120 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7118/api/Users/Login multipart/form-data;+boundary=--------------------------967917116663105677505230 389217
+2022-10-06 16:27:30.127 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users/Login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=--------------------------967917116663105677505230
+Content-Length: 389217
+Postman-Token: [Redacted]
+2022-10-06 16:27:30.136 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:27:30.158 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 16:27:30.205 +03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-10-06 16:27:30.209 +03:00 [INF] Response:
+StatusCode: 415
+Content-Type: application/problem+json; charset=utf-8
+2022-10-06 16:27:30.215 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API) in 50.7484ms
+2022-10-06 16:27:30.220 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:27:30.222 +03:00 [INF] ResponseBody: {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.13","title":"Unsupported Media Type","status":415,"traceId":"00-6d14d4e84257e024c99bab5ef9e3ae8f-f6865b0f65745e4c-00"}
+2022-10-06 16:27:30.227 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7118/api/Users/Login multipart/form-data;+boundary=--------------------------967917116663105677505230 389217 - 415 - application/problem+json;+charset=utf-8 106.4963ms
+2022-10-06 16:28:39.432 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7118/api/Users/Login application/json 67
+2022-10-06 16:28:39.434 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users/Login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 16:28:39.437 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:28:39.439 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 16:28:39.444 +03:00 [INF] RequestBody: {
+    "usernameoremail":"emre.paksoy",
+    "password":"asd123"
+}
+2022-10-06 16:28:40.256 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 16:28:40.483 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 16:28:41.008 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-10-06 16:28:41.009 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API) in 1567.6312ms
+2022-10-06 16:28:41.011 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:28:41.012 +03:00 [INF] Response:
+StatusCode: 200
+2022-10-06 16:28:41.015 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7118/api/Users/Login application/json 67 - 200 0 - 1583.6663ms
+2022-10-06 16:29:34.794 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7118/api/Users/Login application/json 62
+2022-10-06 16:29:34.796 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users/Login
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+Origin: [Redacted]
+Referer: [Redacted]
+Content-Length: 62
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 16:29:34.799 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:29:34.801 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 16:29:34.803 +03:00 [INF] RequestBody: {
+  "usernameOrEmail": "emre.paksoy",
+  "password": "asd123"
+}
+2022-10-06 16:29:34.844 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 16:29:34.850 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 16:29:34.862 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-10-06 16:29:34.863 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API) in 61.2658ms
+2022-10-06 16:29:34.865 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:29:34.866 +03:00 [INF] Response:
+StatusCode: 200
+2022-10-06 16:29:34.867 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7118/api/Users/Login application/json 62 - 200 0 - 72.9274ms
+2022-10-06 16:31:04.499 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 16:31:04.606 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 16:31:04.607 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 16:31:04.610 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 16:31:04.611 +03:00 [INF] Hosting environment: Development
+2022-10-06 16:31:04.611 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 16:31:04.782 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 16:31:04.939 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 158.9265ms
+2022-10-06 16:31:04.948 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 16:31:04.955 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 6.3098ms
+2022-10-06 16:31:05.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 16:31:05.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.0885ms
+2022-10-06 16:31:12.261 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7118/api/Users/Login application/json 67
+2022-10-06 16:31:12.267 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users/Login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 16:31:12.277 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:31:12.296 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 16:31:12.306 +03:00 [INF] RequestBody: {
+    "usernameoremail":"emre.paksoy",
+    "password":"asd123"
+}
+2022-10-06 16:31:13.137 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 16:31:13.375 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 16:31:13.541 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2022-10-06 16:31:13.548 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 16:31:13.554 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API) in 1252.0611ms
+2022-10-06 16:31:13.558 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 16:31:13.559 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYXJhecO8emRlbiBnZWxlbiB1c2VyIG5hbWUgdmVyaWxlY2VrIiwibmJmIjoxNjY1MDYzMDczLCJleHAiOjE2NjUwNjMzNzMsImlzcyI6Ind3dy5teWFwaS5jb20iLCJhdWQiOiJ3d3cuYXNkLmNvbSJ9.7_RnVflF0bQlRY-DqMdS3DC0GPRJnGIP0W-KQs-pDWc","expiration":"2022-10-06T13:36:13.4662717Z"}}
+2022-10-06 16:31:13.565 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7118/api/Users/Login application/json 67 - 200 - application/json;+charset=utf-8 1303.2494ms
+2022-10-06 16:32:29.034 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products application/json 67
+2022-10-06 16:32:29.036 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 16:32:29.182 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-06 16:32:29.187 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2022-10-06 16:32:29.188 +03:00 [INF] RequestBody: 
+2022-10-06 16:32:29.189 +03:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-10-06 16:32:29.190 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products application/json 67 - 401 0 - 156.8383ms
+2022-10-06 16:35:07.957 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products application/json 67
+2022-10-06 16:35:07.959 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 16:35:08.024 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 16:35:08.032 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(E_TicaretAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller E_TicaretAPI.API.Controllers.ProductsController (E-TicaretAPI.API).
+2022-10-06 16:35:08.174 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 16:35:08.219 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Products" AS p
+2022-10-06 16:35:08.235 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-06 16:35:08.238 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-06 16:35:08.256 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2022-10-06 16:35:08.265 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-10-06 16:35:08.276 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 16:35:08.279 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API) in 241.3213ms
+2022-10-06 16:35:08.283 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 16:35:08.284 +03:00 [INF] RequestBody: 
+2022-10-06 16:35:08.286 +03:00 [INF] ResponseBody: {"totalCount":8,"products":[{"id":"0f485638-559f-4546-b701-139dc1366b12","name":"Product 1","stock":20,"price":15,"createdDate":"2022-10-04T13:44:35.715499Z","updatedDate":"0001-01-01T00:00:00"},{"id":"12d54f7e-0a3f-4c0f-b594-f1fd906c6e3a","name":"Product 2","stock":30,"price":15,"createdDate":"2022-10-04T13:44:43.999297Z","updatedDate":"0001-01-01T00:00:00"},{"id":"e33aba44-db2d-4ea4-a3aa-5c774f14f46b","name":"Product 3","stock":40,"price":15,"createdDate":"2022-10-04T13:44:50.430315Z","updatedDate":"0001-01-01T00:00:00"},{"id":"0debc182-aaea-4084-a6e3-82a5b068de66","name":"Product 4","stock":70,"price":8,"createdDate":"2022-10-04T13:45:01.366069Z","updatedDate":"0001-01-01T00:00:00"},{"id":"cc1b5a09-4557-48e0-8616-311bf7ea93da","name":"Product 5","stock":50,"price":9.75,"createdDate":"2022-10-04T13:45:14.560437Z","updatedDate":"0001-01-01T00:00:00"}]}
+2022-10-06 16:35:08.288 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products application/json 67 - 200 - application/json;+charset=utf-8 330.6719ms
+2022-10-06 17:04:34.983 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 17:04:35.100 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 17:04:35.101 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 17:04:35.105 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 17:04:35.107 +03:00 [INF] Hosting environment: Development
+2022-10-06 17:04:35.108 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 17:04:35.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 17:04:35.514 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 131.3175ms
+2022-10-06 17:04:35.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 17:04:35.536 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 6.8380ms
+2022-10-06 17:04:35.592 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 17:04:35.663 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 70.9594ms
+2022-10-06 17:13:30.586 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 17:13:30.698 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 17:13:30.700 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 17:13:30.703 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 17:13:30.704 +03:00 [INF] Hosting environment: Development
+2022-10-06 17:13:30.706 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 17:13:31.468 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 17:13:31.606 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 140.3073ms
+2022-10-06 17:13:31.669 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 17:13:31.674 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.4546ms
+2022-10-06 17:13:31.848 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 17:13:31.951 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 103.5170ms
+2022-10-06 17:13:39.086 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Products?Page=0&Size=5 - -
+2022-10-06 17:13:39.093 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 17:13:39.412 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-06 17:13:39.416 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2022-10-06 17:13:39.418 +03:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-10-06 17:13:39.420 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Products?Page=0&Size=5 - - - 401 0 - 333.6990ms
+2022-10-06 17:13:57.062 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products application/json 67
+2022-10-06 17:13:57.066 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:13:57.240 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidLifetimeException: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-10-06 17:13:57.258 +03:00 [INF] Admin was not authenticated. Failure message: IDX10230: Lifetime validation failed. Delegate returned false, securitytoken: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2022-10-06 17:13:57.260 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-06 17:13:57.264 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2022-10-06 17:13:57.266 +03:00 [INF] RequestBody: 
+2022-10-06 17:13:57.267 +03:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-10-06 17:13:57.268 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products application/json 67 - 401 0 - 206.3422ms
+2022-10-06 17:14:05.943 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7118/api/Users/Login application/json 67
+2022-10-06 17:14:05.944 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users/Login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:14:05.949 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 17:14:05.971 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 17:14:05.981 +03:00 [INF] RequestBody: {
+    "usernameoremail":"emre.paksoy",
+    "password":"asd123"
+}
+2022-10-06 17:14:07.013 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 17:14:07.251 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 17:14:07.382 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2022-10-06 17:14:07.387 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 17:14:07.394 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API) in 1415.5906ms
+2022-10-06 17:14:07.396 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 17:14:07.397 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZW1yZS5wYWtzb3kiLCJuYmYiOjE2NjUwNjU2NDcsImV4cCI6MTY2NTA2NTk0NywiaXNzIjoid3d3Lm15YXBpLmNvbSIsImF1ZCI6Ind3dy5hc2QuY29tIn0.Y7Dyr9fQPgoDI-qOaaTc3ZgkeHvrfNFUgjq1hbEdAQo","expiration":"2022-10-06T14:19:07.3558372Z"}}
+2022-10-06 17:14:07.402 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7118/api/Users/Login application/json 67 - 200 - application/json;+charset=utf-8 1459.1981ms
+2022-10-06 17:14:27.744 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products application/json 67
+2022-10-06 17:14:27.746 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:14:27.759 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 17:14:27.764 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(E_TicaretAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller E_TicaretAPI.API.Controllers.ProductsController (E-TicaretAPI.API).
+2022-10-06 17:14:27.771 +03:00 [INF] tüm ürünler
+2022-10-06 17:14:27.808 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 17:14:27.827 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Products" AS p
+2022-10-06 17:14:27.836 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-06 17:14:27.838 +03:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-06 17:14:27.851 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2022-10-06 17:14:27.858 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-10-06 17:14:27.864 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 17:14:27.865 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API) in 98.8138ms
+2022-10-06 17:14:27.866 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 17:14:27.867 +03:00 [INF] RequestBody: 
+2022-10-06 17:14:27.868 +03:00 [INF] ResponseBody: {"totalCount":8,"products":[{"id":"0f485638-559f-4546-b701-139dc1366b12","name":"Product 1","stock":20,"price":15,"createdDate":"2022-10-04T13:44:35.715499Z","updatedDate":"0001-01-01T00:00:00"},{"id":"12d54f7e-0a3f-4c0f-b594-f1fd906c6e3a","name":"Product 2","stock":30,"price":15,"createdDate":"2022-10-04T13:44:43.999297Z","updatedDate":"0001-01-01T00:00:00"},{"id":"e33aba44-db2d-4ea4-a3aa-5c774f14f46b","name":"Product 3","stock":40,"price":15,"createdDate":"2022-10-04T13:44:50.430315Z","updatedDate":"0001-01-01T00:00:00"},{"id":"0debc182-aaea-4084-a6e3-82a5b068de66","name":"Product 4","stock":70,"price":8,"createdDate":"2022-10-04T13:45:01.366069Z","updatedDate":"0001-01-01T00:00:00"},{"id":"cc1b5a09-4557-48e0-8616-311bf7ea93da","name":"Product 5","stock":50,"price":9.75,"createdDate":"2022-10-04T13:45:14.560437Z","updatedDate":"0001-01-01T00:00:00"}]}
+2022-10-06 17:14:27.870 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products application/json 67 - 200 - application/json;+charset=utf-8 125.9080ms
+2022-10-06 17:16:33.235 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products application/json 67
+2022-10-06 17:16:33.237 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:16:33.240 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-06 17:16:33.240 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2022-10-06 17:16:33.241 +03:00 [INF] RequestBody: 
+2022-10-06 17:16:33.242 +03:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-10-06 17:16:33.243 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products application/json 67 - 401 0 - 8.0902ms
+2022-10-06 17:18:54.641 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products application/json 67
+2022-10-06 17:18:54.643 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:18:54.644 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 17:18:54.645 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(E_TicaretAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryRequest) on controller E_TicaretAPI.API.Controllers.ProductsController (E-TicaretAPI.API).
+2022-10-06 17:18:54.650 +03:00 [INF] tüm ürünler
+2022-10-06 17:18:54.658 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 17:18:54.667 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Products" AS p
+2022-10-06 17:18:54.672 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Name", p."Stock", p."Price", p."CreatedDate", p."UpdatedDate"
+FROM "Products" AS p
+LIMIT @__p_1 OFFSET @__p_0
+2022-10-06 17:18:54.674 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Queries.Product.GetAllProduct.GetAllProductQueryResponse'.
+2022-10-06 17:18:54.675 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 17:18:54.677 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API) in 28.8654ms
+2022-10-06 17:18:54.678 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 17:18:54.679 +03:00 [INF] RequestBody: 
+2022-10-06 17:18:54.681 +03:00 [INF] ResponseBody: {"totalCount":8,"products":[{"id":"0f485638-559f-4546-b701-139dc1366b12","name":"Product 1","stock":20,"price":15,"createdDate":"2022-10-04T13:44:35.715499Z","updatedDate":"0001-01-01T00:00:00"},{"id":"12d54f7e-0a3f-4c0f-b594-f1fd906c6e3a","name":"Product 2","stock":30,"price":15,"createdDate":"2022-10-04T13:44:43.999297Z","updatedDate":"0001-01-01T00:00:00"},{"id":"e33aba44-db2d-4ea4-a3aa-5c774f14f46b","name":"Product 3","stock":40,"price":15,"createdDate":"2022-10-04T13:44:50.430315Z","updatedDate":"0001-01-01T00:00:00"},{"id":"0debc182-aaea-4084-a6e3-82a5b068de66","name":"Product 4","stock":70,"price":8,"createdDate":"2022-10-04T13:45:01.366069Z","updatedDate":"0001-01-01T00:00:00"},{"id":"cc1b5a09-4557-48e0-8616-311bf7ea93da","name":"Product 5","stock":50,"price":9.75,"createdDate":"2022-10-04T13:45:14.560437Z","updatedDate":"0001-01-01T00:00:00"}]}
+2022-10-06 17:18:54.682 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products application/json 67 - 200 - application/json;+charset=utf-8 41.3354ms
+2022-10-06 17:23:02.267 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 17:23:02.372 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 17:23:02.373 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 17:23:02.375 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 17:23:02.376 +03:00 [INF] Hosting environment: Development
+2022-10-06 17:23:02.377 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 17:23:02.926 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 17:23:03.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 131.5409ms
+2022-10-06 17:23:03.068 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 17:23:03.073 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.8369ms
+2022-10-06 17:23:03.125 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 17:23:03.205 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 79.6409ms
+2022-10-06 17:23:06.540 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 17:23:06.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 7.4178ms
+2022-10-06 17:23:06.573 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 17:23:06.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.0345ms
+2022-10-06 17:23:06.636 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 17:23:06.644 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.7006ms
+2022-10-06 17:23:45.408 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 17:23:45.517 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 17:23:45.518 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 17:23:45.521 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 17:23:45.522 +03:00 [INF] Hosting environment: Development
+2022-10-06 17:23:45.522 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 17:23:45.683 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 17:23:45.807 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 126.5001ms
+2022-10-06 17:23:45.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 17:23:45.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 4.6343ms
+2022-10-06 17:23:45.872 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 17:23:45.947 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.6203ms
+2022-10-06 17:23:50.122 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 17:23:50.129 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 6.1580ms
+2022-10-06 17:23:50.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 17:23:50.158 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 1.7775ms
+2022-10-06 17:23:50.198 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 17:23:50.202 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.2362ms
+2022-10-06 17:24:01.397 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/api/Products/0f485638-559f-4546-b701-139dc1366b12 - -
+2022-10-06 17:24:01.406 +03:00 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products/0f485638-559f-4546-b701-139dc1366b12
+Accept: */*
+Host: localhost:7118
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36 OPR/90.0.4480.117
+:method: [Redacted]
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="104", "Opera GX";v="90"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+2022-10-06 17:24:01.434 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-06 17:24:01.439 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2022-10-06 17:24:01.441 +03:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-10-06 17:24:01.445 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/api/Products/0f485638-559f-4546-b701-139dc1366b12 - - - 401 0 - 47.2811ms
+2022-10-06 17:24:34.573 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7118/api/Users/Login application/json 67
+2022-10-06 17:24:34.576 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Users/Login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:24:34.580 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 17:24:34.601 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest) on controller E_TicaretAPI.API.Controllers.UsersController (E-TicaretAPI.API).
+2022-10-06 17:24:34.611 +03:00 [INF] RequestBody: {
+    "usernameoremail":"emre.paksoy",
+    "password":"asd123"
+}
+2022-10-06 17:24:35.431 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 17:24:35.664 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."LockoutEnabled", a."LockoutEnd", a."NameSurname", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-10-06 17:24:35.825 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserSuccessCommandResponse'.
+2022-10-06 17:24:35.830 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 17:24:35.836 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API) in 1229.3713ms
+2022-10-06 17:24:35.840 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.UsersController.Login (E-TicaretAPI.API)'
+2022-10-06 17:24:35.841 +03:00 [INF] ResponseBody: {"token":{"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZW1yZS5wYWtzb3kiLCJuYmYiOjE2NjUwNjYyNzUsImV4cCI6MTY2NTA2NjU3NSwiaXNzIjoid3d3Lm15YXBpLmNvbSIsImF1ZCI6Ind3dy5hc2QuY29tIn0._ac2P4JXjBk4aCY3XVBv0DeVX_ZUtgRHocMt67TEwQs","expiration":"2022-10-06T14:29:35.7516529Z"}}
+2022-10-06 17:24:35.846 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7118/api/Users/Login application/json 67 - 200 - application/json;+charset=utf-8 1272.5050ms
+2022-10-06 17:25:01.963 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products/0f485638-559f-4546-b701-139dc1366b12 application/json 67
+2022-10-06 17:25:01.966 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products/0f485638-559f-4546-b701-139dc1366b12
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:25:01.972 +03:00 [INF] Admin was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2022-10-06 17:25:01.975 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-06 17:25:01.979 +03:00 [INF] AuthenticationScheme: Admin was challenged.
+2022-10-06 17:25:01.980 +03:00 [INF] RequestBody: 
+2022-10-06 17:25:01.980 +03:00 [INF] Response:
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+2022-10-06 17:25:01.982 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products/0f485638-559f-4546-b701-139dc1366b12 application/json 67 - 401 0 - 19.0128ms
+2022-10-06 17:25:12.133 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products/0f485638-559f-4546-b701-139dc1366b12 application/json 67
+2022-10-06 17:25:12.134 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products/0f485638-559f-4546-b701-139dc1366b12
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:25:12.177 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 17:25:12.181 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(E_TicaretAPI.Application.Features.Queries.Product.GetByIdProduct.GetByIdProductQueryRequest) on controller E_TicaretAPI.API.Controllers.ProductsController (E-TicaretAPI.API).
+2022-10-06 17:25:12.225 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 17:25:12.237 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__Parse_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."Price", p."Stock", p."UpdatedDate"
+FROM "Products" AS p
+WHERE p."Id" = @__Parse_0
+LIMIT 1
+2022-10-06 17:25:12.245 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Queries.Product.GetByIdProduct.GetByIdProductQueryResponse'.
+2022-10-06 17:25:12.249 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 17:25:12.250 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API) in 66.1933ms
+2022-10-06 17:25:12.252 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 17:25:12.253 +03:00 [INF] RequestBody: 
+2022-10-06 17:25:12.253 +03:00 [INF] ResponseBody: {"name":"Product 1","stock":20,"price":15}
+2022-10-06 17:25:12.254 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products/0f485638-559f-4546-b701-139dc1366b12 application/json 67 - 200 - application/json;+charset=utf-8 121.4585ms
+2022-10-06 17:25:56.463 +03:00 [INF] User profile is available. Using 'C:\Users\emrep\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-06 17:25:56.571 +03:00 [INF] Now listening on: https://localhost:7118
+2022-10-06 17:25:56.572 +03:00 [INF] Now listening on: http://localhost:5118
+2022-10-06 17:25:56.575 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-06 17:25:56.576 +03:00 [INF] Hosting environment: Development
+2022-10-06 17:25:56.577 +03:00 [INF] Content root path: D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Presentation\E-TicaretAPI.API\
+2022-10-06 17:25:56.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+2022-10-06 17:25:56.845 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 134.1468ms
+2022-10-06 17:25:56.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+2022-10-06 17:25:56.864 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 5.9478ms
+2022-10-06 17:25:56.909 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+2022-10-06 17:25:56.991 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 81.9688ms
+2022-10-06 17:26:06.221 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7118/api/Products/0f485638-559f-4546-b701-139dc1366b12 application/json 67
+2022-10-06 17:26:06.230 +03:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Products/0f485638-559f-4546-b701-139dc1366b12
+Accept: */*
+Connection: keep-alive
+Host: localhost:7118
+User-Agent: PostmanRuntime/7.29.2
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: [Redacted]
+2022-10-06 17:26:06.365 +03:00 [INF] Executing endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 17:26:06.388 +03:00 [INF] Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(E_TicaretAPI.Application.Features.Queries.Product.GetByIdProduct.GetByIdProductQueryRequest) on controller E_TicaretAPI.API.Controllers.ProductsController (E-TicaretAPI.API).
+2022-10-06 17:26:07.185 +03:00 [INF] Entity Framework Core 6.0.9 initialized 'ETicaretAPIDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-06 17:26:07.406 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__Parse_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedDate", p."Name", p."Price", p."Stock", p."UpdatedDate"
+FROM "Products" AS p
+WHERE p."Id" = @__Parse_0
+LIMIT 1
+2022-10-06 17:26:07.427 +03:00 [INF] Logl lanan ürün Id 0f485638-559f-4546-b701-139dc1366b12 , ürün adı:Product 1
+2022-10-06 17:26:07.435 +03:00 [INF] Executing OkObjectResult, writing value of type 'E_TicaretAPI.Application.Features.Queries.Product.GetByIdProduct.GetByIdProductQueryResponse'.
+2022-10-06 17:26:07.439 +03:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+2022-10-06 17:26:07.446 +03:00 [INF] Executed action E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API) in 1051.4758ms
+2022-10-06 17:26:07.448 +03:00 [INF] Executed endpoint 'E_TicaretAPI.API.Controllers.ProductsController.Get (E-TicaretAPI.API)'
+2022-10-06 17:26:07.450 +03:00 [INF] RequestBody: 
+2022-10-06 17:26:07.451 +03:00 [INF] ResponseBody: {"name":"Product 1","stock":20,"price":15}
+2022-10-06 17:26:07.455 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7118/api/Products/0f485638-559f-4546-b701-139dc1366b12 application/json 67 - 200 - application/json;+charset=utf-8 1233.7698ms

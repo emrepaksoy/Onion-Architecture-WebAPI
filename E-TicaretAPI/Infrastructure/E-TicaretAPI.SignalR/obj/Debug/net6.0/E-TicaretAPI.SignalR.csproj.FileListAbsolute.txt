@@ -1,0 +1,17 @@
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\bin\Debug\net6.0\E-TicaretAPI.SignalR.deps.json
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\bin\Debug\net6.0\E-TicaretAPI.SignalR.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\bin\Debug\net6.0\E-TicaretAPI.SignalR.pdb
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\bin\Debug\net6.0\E-TicaretAPI.Application.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\bin\Debug\net6.0\E-TicaretAPI.Domain.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\bin\Debug\net6.0\E-TicaretAPI.Application.pdb
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\bin\Debug\net6.0\E-TicaretAPI.Domain.pdb
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\E-TicaretAPI.SignalR.csproj.AssemblyReference.cache
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\E-TicaretAPI.SignalR.GeneratedMSBuildEditorConfig.editorconfig
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\E-TicaretAPI.SignalR.AssemblyInfoInputs.cache
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\E-TicaretAPI.SignalR.AssemblyInfo.cs
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\E-TicaretAPI.SignalR.csproj.CoreCompileInputs.cache
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\E-TicaretAPI.SignalR.csproj.CopyComplete
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\E-TicaretAPI.SignalR.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\refint\E-TicaretAPI.SignalR.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\E-TicaretAPI.SignalR.pdb
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.SignalR\obj\Debug\net6.0\ref\E-TicaretAPI.SignalR.dll

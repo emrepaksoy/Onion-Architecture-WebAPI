@@ -1,5 +1,4 @@
-﻿using E_TicaretAPI.Application.Abstraction.Storage;
-using E_TicaretAPI.Application.Features.Commands.Product.CreateProduct;
+﻿using E_TicaretAPI.Application.Features.Commands.Product.CreateProduct;
 using E_TicaretAPI.Application.Features.Commands.Product.RemoveProduct;
 using E_TicaretAPI.Application.Features.Commands.Product.UpdateProduct;
 using E_TicaretAPI.Application.Features.Commands.ProductImageFile.RemoveProductImage;
@@ -7,15 +6,9 @@ using E_TicaretAPI.Application.Features.Commands.ProductImageFile.UploadProductI
 using E_TicaretAPI.Application.Features.Queries.Product.GetAllProduct;
 using E_TicaretAPI.Application.Features.Queries.Product.GetByIdProduct;
 using E_TicaretAPI.Application.Features.Queries.ProductImageFile.GetProductImages;
-using E_TicaretAPI.Application.Repositories;
-using E_TicaretAPI.Application.RequestParameters;
-
-using E_TicaretAPI.Application.ViewModels.Products;
-using E_TicaretAPI.Domain.Entities;
 using MediatR;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Net;
 
 namespace E_TicaretAPI.API.Controllers
@@ -58,6 +51,7 @@ namespace E_TicaretAPI.API.Controllers
         }
 
             [HttpPost]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Post(CreateProductCommandRequest createProductCommandRequest)
         {
             CreateProductCommandResponse response = await _mediator.Send(createProductCommandRequest); 
@@ -67,6 +61,8 @@ namespace E_TicaretAPI.API.Controllers
 
 
         [HttpPut]
+        [Authorize(AuthenticationSchemes = "Admin")]
+
         public async Task<IActionResult> Put([FromBody] UpdateProductCommandRequest updateProductCommandRequest)
         {
             //Ef de bir veritabanın elde edilen veriyi güncellemek için ilgili verinin context sınıfından  gelmesi yeterlidir.
@@ -89,6 +85,7 @@ namespace E_TicaretAPI.API.Controllers
 
 
         [HttpPost("[action]")] // bu sekilde actionda id  parametresi query stringden gelir. www.asd.com/api/products?id=bla-bla-bla
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> UploadProductFile([FromQuery] UploadProductImageCommandRequest uploadProductImageCommandRequest)
         {
 
@@ -98,6 +95,7 @@ namespace E_TicaretAPI.API.Controllers
         }
 
         [HttpGet("[action]/{Id}")] // route parametrelerinden gelecek id
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> GetProductImages([FromRoute] GetProductImagesQueryRequest getProductImagesQueryRequest)
         {
             List< GetProductImagesQueryResponse>  response =  await _mediator.Send(getProductImagesQueryRequest);
@@ -107,6 +105,7 @@ namespace E_TicaretAPI.API.Controllers
 
 
         [HttpDelete("[action]/{Id}/")]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> DeleteProductImage([FromRoute] RemoveProductImageCommandRequest removeProductImageCommandRequest, [FromQuery] string ImageId)
         {
             removeProductImageCommandRequest.ImageId = ImageId;

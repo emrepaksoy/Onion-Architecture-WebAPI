@@ -25,7 +25,7 @@ namespace E_TicaretAPI.Application.Features.Commands.ProductImageFile.UploadProd
 
         public async Task<UploadProductImageCommandResponse> Handle(UploadProductImageCommandRequest request, CancellationToken cancellationToken)
         {
-            List<(string fileName, string pathOrContainerName)> result = await _storageService.UploadAsync("photo-images", request.Files);
+            List<(string fileName, string pathOrContainerName)> result = await _storageService.UploadAsync("image-files", request.Files);
 
             Domain.Entities.Product product = await _productReadRepository.GetByIdAsync(request.Id);
 

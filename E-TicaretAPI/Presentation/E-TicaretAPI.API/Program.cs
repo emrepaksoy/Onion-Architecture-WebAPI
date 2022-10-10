@@ -1,3 +1,5 @@
+using E_TicaretAPI.API.Configurations.ColumnWriters;
+using E_TicaretAPI.API.Extensions;
 using E_TicaretAPI.Application;
 using E_TicaretAPI.Application.Validators.Products;
 using E_TicaretAPI.Infrastructure;
@@ -5,12 +7,15 @@ using E_TicaretAPI.Infrastructure.Filters;
 using E_TicaretAPI.Infrastructure.Services.Storage.Azure;
 using E_TicaretAPI.Infrastructure.Services.Storage.Local;
 using E_TicaretAPI.Persistence;
+using E_TicaretAPI.SignalR;
+using E_TicaretAPI.SignalR.Hubs;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.IdentityModel.Tokens;
 using NpgsqlTypes;
 using Serilog;
+using Serilog.Context;
 using Serilog.Core;
 using Serilog.Sinks.PostgreSQL;
 using System.Security.Claims;
@@ -21,6 +26,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastuctureServices();
 builder.Services.AddApplicationServices();
+builder.Services.AddSignalRServices();
+
 //builder.Services.AddStorage<LocalStorage>();
 builder.Services.AddStorage<AzureStorage>();
 
@@ -28,7 +35,7 @@ builder.Services.AddStorage<AzureStorage>();
 
 //Cors Politikalarýný ayarlamamýz saðlayan servis. Cors Middleware çaðýrýlmalýdýr.
 //builder.Services.AddCors(options => options.AddDefaultPolicy(policy => 
-//    policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin())); // her gelen isteðe izin verir. :)
+//    policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials())); // her gelen isteðe izin verir. :)
 
 
 //builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.WithOrigins("isteklerin nerden geleceði bildirilir.")..AllowAnyHeader().AllowAnyMethod()));
@@ -44,7 +51,7 @@ builder.Services.AddSwaggerGen();
 
 Logger log = new LoggerConfiguration()
     .WriteTo.Console()
-    .WriteTo.File("logs/log.txt")
+    //.WriteTo.File("logs/log.txt")
     .WriteTo.PostgreSQL(builder.Configuration.GetConnectionString("PostgreSQL"), "logs",
         needAutoCreateTable: true,
         columnOptions: new Dictionary<string, ColumnWriterBase>
@@ -55,7 +62,7 @@ Logger log = new LoggerConfiguration()
             {"time_stamp", new TimestampColumnWriter(NpgsqlDbType.Timestamp)},
             {"exception", new ExceptionColumnWriter(NpgsqlDbType.Text)},
             {"log_event", new LogEventSerializedColumnWriter(NpgsqlDbType.Json)},
-           // {"user_name", new UsernameColumnWriter()}
+            {"user_name", new UsernameColumnWriter()}
         })
     .Enrich.FromLogContext()
     .MinimumLevel.Information()
@@ -81,7 +88,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
          {
              ValidateAudience = true,    //oluþturacaðýmýz token deðerini hangi sitelerin kullanacaðýný belirleyen deðer misal -> www.asd.com
             ValidateIssuer = true,      //oluþturulacak token deðerinin kimin daðýttýðýný ifade eden deðer. misal -> www.myapi.com
-            ValidateLifetime = true,    //oluþturulan token deðerinin kontrol edildiði doðrulama.
+            ValidateLifetime = true,    //oluþturulan token deðerinin süresinin kontrol edildiði doðrulama.
             ValidateIssuerSigningKey = true, //Üretilecek token deðerinin uygulamaya ait bir deðer olduðunu ifade eden suciry ker verisinin doðrulanmasýdýr. 
 
             ValidAudience = builder.Configuration["Token:Audience"],
@@ -103,10 +110,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseSerilogRequestLogging();
-app.UseHttpLogging();
+app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
 app.UseStaticFiles();
+app.UseSerilogRequestLogging();
+
+app.UseHttpLogging();
+
 //yukarýda belirlenen Cors politikasýnýn uygulama middleware olarak iþlemesini saðlar.
 //app.UseCors();
 
@@ -116,8 +125,20 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-
+app.Use(async(context, next) =>
+{
+    var username = context.User?.Identity?.IsAuthenticated != null ? context.User.Identity.Name : null;
+    LogContext.PushProperty("user_name", username);
+    await next();
+});
 
 app.MapControllers();
 
+app.MapHubs();
+
 app.Run();
+
+
+
+
+
