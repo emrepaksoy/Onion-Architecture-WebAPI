@@ -27,91 +27,63 @@ namespace E_TicaretAPI.API.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] GetAllProductQueryRequest getAllProductQueryRequest)
-        {
-          GetAllProductQueryResponse response =  await _mediator.Send(getAllProductQueryRequest);
-            return Ok(response);
+        [HttpGet("[Action]")]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        public async Task<IActionResult> GetProducts([FromQuery] GetAllProductQueryRequest getAllProductQueryRequest) => Ok(await _mediator.Send(getAllProductQueryRequest));
 
-          
-            //Tracking Test
-            //Product p = await _productReadRepository.GetByIdAsync("00c2f8e5-56df-4b01-bcd5-2852764896e8", false);
-            //p.Name = "Product 2";
-            //await _productWriteRepository.SaveAsync();
-        }
-
+        #region tracking test
+        //Tracking Test
+        //Product p = await _productReadRepository.GetByIdAsync("00c2f8e5-56df-4b01-bcd5-2852764896e8", false);
+        //p.Name = "Product 2";
+        //await _productWriteRepository.SaveAsync();
+        #endregion
 
         [HttpGet("{Id}")]
-        public async Task<IActionResult> Get([FromRoute] GetByIdProductQueryRequest getByIdProductQueryRequest)
-        {
-            GetByIdProductQueryResponse response = await _mediator.Send(getByIdProductQueryRequest);
+        public async Task<IActionResult> Get([FromRoute] GetByIdProductQueryRequest getByIdProductQueryRequest)=> Ok(await _mediator.Send(getByIdProductQueryRequest));
 
-            return  Ok(response);
-
-        }
-
-            [HttpPost]
+        [HttpPost("[Action]")]
         [Authorize(AuthenticationSchemes = "Admin")]
-        public async Task<IActionResult> Post(CreateProductCommandRequest createProductCommandRequest)
-        {
-            CreateProductCommandResponse response = await _mediator.Send(createProductCommandRequest); 
-          
-            return StatusCode((int)HttpStatusCode.Created);
-        }
+        public async Task<IActionResult> CreateProduct(CreateProductCommandRequest createProductCommandRequest)
+          => Ok( await _mediator.Send(createProductCommandRequest)); 
 
-
-        [HttpPut]
+        [HttpPut("[Action]")]
         [Authorize(AuthenticationSchemes = "Admin")]
 
-        public async Task<IActionResult> Put([FromBody] UpdateProductCommandRequest updateProductCommandRequest)
-        {
-            //Ef de bir veritabanın elde edilen veriyi güncellemek için ilgili verinin context sınıfından  gelmesi yeterlidir.
-            //Güncelleme işlemi yapmak için ilgili veri üzerinde propertylerde değişiklik yapmamız tracking mekanızmasi tarafından bunun update sorgusu olduğu anlaşılır ve savachanges yapıldığında update sorgusu execute edilir.
-            // eğerki ilgili veri tracking mekanizması tarafından takip edilmiyorsa ve bu veri üzerinde güncelleme yapılmak isteniyorsa ef deki update fonksiyonu kullanılabilir.
+        public async Task<IActionResult> UpdateProduct([FromBody] UpdateProductCommandRequest updateProductCommandRequest) => Ok(await _mediator.Send(updateProductCommandRequest));
 
-            UpdateProductCommandResponse response =  await _mediator.Send(updateProductCommandRequest);
-    
-            return Ok();
-        }
+        #region Update fonks not
+        //Ef de bir veritabanın elde edilen veriyi güncellemek için ilgili verinin context sınıfından  gelmesi yeterlidir.
+        //Güncelleme işlemi yapmak için ilgili veri üzerinde propertylerde değişiklik yapmamız tracking mekanızmasi tarafından bunun update sorgusu olduğu anlaşılır ve savachanges yapıldığında update sorgusu execute edilir.
+        // eğerki ilgili veri tracking mekanizması tarafından takip edilmiyorsa ve bu veri üzerinde güncelleme yapılmak isteniyorsa ef deki update fonksiyonu kullanılabilir.
+        #endregion
 
         [HttpDelete("{Id}")]
-        public async Task<IActionResult> Delete([FromRoute] RemoveProductCommandRequest removeProductCommandRequest)
-        {
-
-            RemoveProductCommandResponse response =  await  _mediator.Send(removeProductCommandRequest);
-            return Ok();
-        }
+        public async Task<IActionResult> Delete([FromRoute] RemoveProductCommandRequest removeProductCommandRequest) =>  Ok(await _mediator.Send(removeProductCommandRequest));
 
 
 
-        [HttpPost("[action]")] // bu sekilde actionda id  parametresi query stringden gelir. www.asd.com/api/products?id=bla-bla-bla
+        [HttpPost("[action]")] 
+        // bu sekilde actionda id  parametresi query stringden gelir. www.asd.com/api/products?id=bla-bla-bla
         [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> UploadProductFile([FromQuery] UploadProductImageCommandRequest uploadProductImageCommandRequest)
         {
-
             uploadProductImageCommandRequest.Files = Request.Form.Files;
-           UploadProductImageCommandResponse response =  await _mediator.Send(uploadProductImageCommandRequest);
-            return Ok();
+            return Ok(await _mediator.Send(uploadProductImageCommandRequest));
         }
 
-        [HttpGet("[action]/{Id}")] // route parametrelerinden gelecek id
+
+        [HttpGet("[action]/{Id}")] 
+        // route parametrelerinden gelecek id
         [Authorize(AuthenticationSchemes = "Admin")]
-        public async Task<IActionResult> GetProductImages([FromRoute] GetProductImagesQueryRequest getProductImagesQueryRequest)
-        {
-            List< GetProductImagesQueryResponse>  response =  await _mediator.Send(getProductImagesQueryRequest);
-            return Ok(response);
-        }
-
-
+        public async Task<IActionResult> GetProductImages([FromRoute] GetProductImagesQueryRequest getProductImagesQueryRequest) => Ok( await _mediator.Send(getProductImagesQueryRequest));
+            
 
         [HttpDelete("[action]/{Id}/")]
         [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> DeleteProductImage([FromRoute] RemoveProductImageCommandRequest removeProductImageCommandRequest, [FromQuery] string ImageId)
         {
             removeProductImageCommandRequest.ImageId = ImageId;
-            RemoveProductImageCommandResponse response = await _mediator.Send(removeProductImageCommandRequest);
-          
-            return Ok();
+            return Ok(await _mediator.Send(removeProductImageCommandRequest));
         }
     }
 }

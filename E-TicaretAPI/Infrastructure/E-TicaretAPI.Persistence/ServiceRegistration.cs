@@ -1,10 +1,6 @@
 ﻿using E_TicaretAPI.Persistence.Contexts;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using Microsoft.EntityFrameworkCore;
 using E_TicaretAPI.Application.Repositories;
 using E_TicaretAPI.Persistence.Repositories;

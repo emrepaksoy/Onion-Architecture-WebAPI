@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "l1aEjgkzOqvGrkiP06xmpCQHquSedOSECZim+pL+QGw=",
+  "Source": "BooksBazaarAPI.API",
+  "BasePath": "_content/BooksBazaarAPI.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

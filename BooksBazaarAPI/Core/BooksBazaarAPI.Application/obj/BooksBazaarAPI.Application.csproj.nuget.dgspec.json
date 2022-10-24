@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Application\\BooksBazaarAPI.Application.csproj": {}
+  },
+  "projects": {
+    "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Application\\BooksBazaarAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Application\\BooksBazaarAPI.Application.csproj",
+        "projectName": "BooksBazaarAPI.Application",
+        "projectPath": "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Application\\BooksBazaarAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\emrep\\.nuget\\packages\\",
+        "outputPath": "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\emrep\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Domain\\BooksBazaarAPI.Domain.csproj": {
+                "projectPath": "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Domain\\BooksBazaarAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Domain\\BooksBazaarAPI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Domain\\BooksBazaarAPI.Domain.csproj",
+        "projectName": "BooksBazaarAPI.Domain",
+        "projectPath": "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Domain\\BooksBazaarAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\emrep\\.nuget\\packages\\",
+        "outputPath": "D:\\ef_rest_api\\OnionArchitecture\\BooksBazaarAPI\\Core\\BooksBazaarAPI.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\emrep\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

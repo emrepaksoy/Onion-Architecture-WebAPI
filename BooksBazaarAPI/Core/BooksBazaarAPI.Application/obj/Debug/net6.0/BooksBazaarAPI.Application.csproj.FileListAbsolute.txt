@@ -1,0 +1,15 @@
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\bin\Debug\net6.0\BooksBazaarAPI.Application.deps.json
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\bin\Debug\net6.0\BooksBazaarAPI.Application.dll
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\bin\Debug\net6.0\BooksBazaarAPI.Application.pdb
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\BooksBazaarAPI.Application.csproj.AssemblyReference.cache
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\BooksBazaarAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\BooksBazaarAPI.Application.AssemblyInfoInputs.cache
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\BooksBazaarAPI.Application.AssemblyInfo.cs
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\BooksBazaarAPI.Application.csproj.CoreCompileInputs.cache
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\BooksBazaarAPI.Application.dll
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\refint\BooksBazaarAPI.Application.dll
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\BooksBazaarAPI.Application.pdb
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\ref\BooksBazaarAPI.Application.dll
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\bin\Debug\net6.0\BooksBazaarAPI.Domain.dll
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\bin\Debug\net6.0\BooksBazaarAPI.Domain.pdb
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Core\BooksBazaarAPI.Application\obj\Debug\net6.0\BooksBazaarAPI.Application.csproj.CopyComplete

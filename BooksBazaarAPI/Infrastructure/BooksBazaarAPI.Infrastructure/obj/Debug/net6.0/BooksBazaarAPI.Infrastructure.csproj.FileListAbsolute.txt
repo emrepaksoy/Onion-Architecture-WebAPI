@@ -1,0 +1,12 @@
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\bin\Debug\net6.0\BooksBazaarAPI.Infrastructure.deps.json
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\bin\Debug\net6.0\BooksBazaarAPI.Infrastructure.dll
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\bin\Debug\net6.0\BooksBazaarAPI.Infrastructure.pdb
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\BooksBazaarAPI.Infrastructure.csproj.AssemblyReference.cache
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\BooksBazaarAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\BooksBazaarAPI.Infrastructure.AssemblyInfoInputs.cache
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\BooksBazaarAPI.Infrastructure.AssemblyInfo.cs
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\BooksBazaarAPI.Infrastructure.csproj.CoreCompileInputs.cache
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\BooksBazaarAPI.Infrastructure.dll
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\refint\BooksBazaarAPI.Infrastructure.dll
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\BooksBazaarAPI.Infrastructure.pdb
+D:\ef_rest_api\OnionArchitecture\BooksBazaarAPI\Infrastructure\BooksBazaarAPI.Infrastructure\obj\Debug\net6.0\ref\BooksBazaarAPI.Infrastructure.dll

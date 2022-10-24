@@ -65,7 +65,7 @@ Logger log = new LoggerConfiguration()
             {"user_name", new UsernameColumnWriter()}
         })
     .Enrich.FromLogContext()
-    .MinimumLevel.Information()
+    .MinimumLevel.Error()
     .CreateLogger();
 
 builder.Host.UseSerilog(log);

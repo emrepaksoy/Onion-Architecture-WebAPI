@@ -19,26 +19,18 @@ namespace E_TicaretAPI.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateUserCommandRequest createUserCommandRequest)
-        {
-            CreateUserCommandResponse response = await _mediator.Send(createUserCommandRequest);
+        public async Task<IActionResult> Create(CreateUserCommandRequest createUserCommandRequest) => Ok( await _mediator.Send(createUserCommandRequest));
 
-            return Ok(response);
-        }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
-        {
-            LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
-            return Ok(response);
-        }
+        public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest) => Ok(await _mediator.Send(loginUserCommandRequest));
+            
+        
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> RefreshTokenLogin([FromQuery] RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest)
-        {
-            RefreshTokenLoginCommandResponse response = await _mediator.Send(refreshTokenLoginCommandRequest);
-            return Ok(response);
-        }
+        public async Task<IActionResult> RefreshTokenLogin([FromQuery] RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest) =>  Ok(await _mediator.Send(refreshTokenLoginCommandRequest));
+           
+        
     }
 
 }
