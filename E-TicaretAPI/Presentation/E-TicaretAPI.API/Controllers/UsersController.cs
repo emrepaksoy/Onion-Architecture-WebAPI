@@ -25,8 +25,6 @@ namespace E_TicaretAPI.API.Controllers
         [HttpPost("[action]")]
         public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest) => Ok(await _mediator.Send(loginUserCommandRequest));
             
-        
-
         [HttpPost("[action]")]
         public async Task<IActionResult> RefreshTokenLogin([FromQuery] RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest) =>  Ok(await _mediator.Send(refreshTokenLoginCommandRequest));
            
