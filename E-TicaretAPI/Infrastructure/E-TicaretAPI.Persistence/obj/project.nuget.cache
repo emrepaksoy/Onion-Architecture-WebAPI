@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SeZlWMUy5KEX7XxexIsdEN2JmG3QAnImnYF5wVS5TCLs45ApUYnN8+uHDACP8ozJOlvdteJa4hSErGlgBcmw4g==",
+  "dgSpecHash": "2Arsz1jCGWXoe8SQ+veHeM59E772Uwj3Km4TesX5n+XYwMxWntVpdpqYd5HBPlnvUr/cQ2KMGppl/JP464iAQQ==",
   "success": true,
   "projectFilePath": "D:\\ef_rest_api\\OnionArchitecture\\E-TicaretAPI\\Infrastructure\\E-TicaretAPI.Persistence\\E-TicaretAPI.Persistence.csproj",
   "expectedPackageFiles": [

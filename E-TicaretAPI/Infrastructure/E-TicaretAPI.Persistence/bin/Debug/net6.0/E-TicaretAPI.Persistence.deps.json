@@ -9,6 +9,7 @@
       "E-TicaretAPI.Persistence/1.0.0": {
         "dependencies": {
           "E-TicaretAPI.Application": "1.0.0",
+          "E-TicaretAPI.Mail": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9",
@@ -792,6 +793,14 @@
         "runtime": {
           "E-TicaretAPI.Domain.dll": {}
         }
+      },
+      "E-TicaretAPI.Mail/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "E-TicaretAPI.Mail.dll": {}
+        }
       }
     }
   },
@@ -1402,6 +1411,11 @@
       "sha512": ""
     },
     "E-TicaretAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "E-TicaretAPI.Mail/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

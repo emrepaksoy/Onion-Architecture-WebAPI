@@ -1810,11 +1810,25 @@
           "bin/placeholder/E-TicaretAPI.Infrastructure.dll": {}
         }
       },
+      "E-TicaretAPI.Mail/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E-TicaretAPI.Mail.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E-TicaretAPI.Mail.dll": {}
+        }
+      },
       "E-TicaretAPI.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "E-TicaretAPI.Application": "1.0.0",
+          "E-TicaretAPI.Mail": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9",
@@ -5527,6 +5541,11 @@
       "type": "project",
       "path": "../../Infrastructure/E-TicaretAPI.Infrastructure/E-TicaretAPI.Infrastructure.csproj",
       "msbuildProject": "../../Infrastructure/E-TicaretAPI.Infrastructure/E-TicaretAPI.Infrastructure.csproj"
+    },
+    "E-TicaretAPI.Mail/1.0.0": {
+      "type": "project",
+      "path": "../../Infrastructure/E-TicaretAPI.Mail/E-TicaretAPI.Mail.csproj",
+      "msbuildProject": "../../Infrastructure/E-TicaretAPI.Mail/E-TicaretAPI.Mail.csproj"
     },
     "E-TicaretAPI.Persistence/1.0.0": {
       "type": "project",

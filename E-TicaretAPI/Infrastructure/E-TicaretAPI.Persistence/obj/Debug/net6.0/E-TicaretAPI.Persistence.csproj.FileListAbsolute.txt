@@ -17,3 +17,5 @@ D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.Persis
 D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.Persistence\obj\Debug\net6.0\ref\E-TicaretAPI.Persistence.dll
 D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.Persistence\bin\Debug\net6.0\E-TicaretAPI.Persistence.runtimeconfig.json
 D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.Persistence\obj\Debug\net6.0\E-TicaretAPI.Persistence.genruntimeconfig.cache
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.Persistence\bin\Debug\net6.0\E-TicaretAPI.Mail.dll
+D:\ef_rest_api\OnionArchitecture\E-TicaretAPI\Infrastructure\E-TicaretAPI.Persistence\bin\Debug\net6.0\E-TicaretAPI.Mail.pdb

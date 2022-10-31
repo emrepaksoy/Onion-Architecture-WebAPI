@@ -19,7 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-TicaretAPI.API", "Presentation\E-TicaretAPI.API\E-TicaretAPI.API.csproj", "{B2FECBEB-130A-4CAE-BDA7-17B23401349F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-TicaretAPI.SignalR", "Infrastructure\E-TicaretAPI.SignalR\E-TicaretAPI.SignalR.csproj", "{80716FDB-921A-49F9-8EC1-B78679EEF09F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-TicaretAPI.SignalR", "Infrastructure\E-TicaretAPI.SignalR\E-TicaretAPI.SignalR.csproj", "{80716FDB-921A-49F9-8EC1-B78679EEF09F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-TicaretAPI.Mail", "Infrastructure\E-TicaretAPI.Mail\E-TicaretAPI.Mail.csproj", "{491E0AE8-C7C0-4DEA-8F73-FD143988ED72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{80716FDB-921A-49F9-8EC1-B78679EEF09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80716FDB-921A-49F9-8EC1-B78679EEF09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80716FDB-921A-49F9-8EC1-B78679EEF09F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{491E0AE8-C7C0-4DEA-8F73-FD143988ED72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491E0AE8-C7C0-4DEA-8F73-FD143988ED72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491E0AE8-C7C0-4DEA-8F73-FD143988ED72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491E0AE8-C7C0-4DEA-8F73-FD143988ED72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{520C455B-D5D0-4205-B471-F49139FD1D23} = {2F26322C-836E-4EA3-8A2F-D65873589863}
 		{B2FECBEB-130A-4CAE-BDA7-17B23401349F} = {FFCDAE30-A1C5-4780-93ED-C62922A46CD4}
 		{80716FDB-921A-49F9-8EC1-B78679EEF09F} = {2F26322C-836E-4EA3-8A2F-D65873589863}
+		{491E0AE8-C7C0-4DEA-8F73-FD143988ED72} = {2F26322C-836E-4EA3-8A2F-D65873589863}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BBA8B011-F236-4768-9C92-A92B91BEA1A1}

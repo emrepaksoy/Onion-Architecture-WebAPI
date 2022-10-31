@@ -7,6 +7,7 @@ using E_TicaretAPI.Persistence.Repositories;
 using E_TicaretAPI.Domain.Entities.Identity;
 using E_TicaretAPI.Application.Abstraction.Services;
 using E_TicaretAPI.Persistence.Services;
+using E_TicaretAPI.Mail;
 
 namespace E_TicaretAPI.Persistence
 {
@@ -28,6 +29,7 @@ namespace E_TicaretAPI.Persistence
 
             }).AddEntityFrameworkStores<ETicaretAPIDbContext>();
 
+            services.AddScoped<IMailService, MailService>();
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();

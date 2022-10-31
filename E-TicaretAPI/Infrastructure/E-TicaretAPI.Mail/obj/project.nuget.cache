@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "95SMVmOwpYYsaoKLXY2iou+WifcFmft3p2lTfNmZT4Qu2r3g0lKbv2pMFeVlRzjynPYt615j5cUtip4vqpG3rA==",
+  "success": true,
+  "projectFilePath": "D:\\ef_rest_api\\OnionArchitecture\\E-TicaretAPI\\Infrastructure\\E-TicaretAPI.Mail\\E-TicaretAPI.Mail.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emrep\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\emrep\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\emrep\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

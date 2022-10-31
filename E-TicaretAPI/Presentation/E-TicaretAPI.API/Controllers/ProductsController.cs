@@ -6,6 +6,7 @@ using E_TicaretAPI.Application.Features.Commands.ProductImageFile.UploadProductI
 using E_TicaretAPI.Application.Features.Queries.Product.GetAllProduct;
 using E_TicaretAPI.Application.Features.Queries.Product.GetByIdProduct;
 using E_TicaretAPI.Application.Features.Queries.ProductImageFile.GetProductImages;
+using E_TicaretAPI.Mail;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,12 +21,22 @@ namespace E_TicaretAPI.API.Controllers
 
 
         readonly IMediator _mediator;
-        public ProductsController( IMediator mediator)
+        readonly IMailService _mailService;
+        public ProductsController(IMediator mediator, IMailService mailService)
         {
-            
+
             _mediator = mediator;
+            _mailService = mailService;
         }
 
+        //Mail Test
+
+        [HttpGet("test-mail")]
+        public async Task<IActionResult> MailTest()
+        {
+            await _mailService.SendMailAsync("to email", "Test Mail","<strong>this is test mail.</strong>");
+            return Ok();
+        }
 
         [HttpGet("[Action]")]
         [Authorize(AuthenticationSchemes = "Admin")]
